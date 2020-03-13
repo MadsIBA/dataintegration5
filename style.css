@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 1rem;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Playfair Display' !important;
+}
+
+h1,
+h3 {
+    font-family: 'Playfail Display';
+    line-height: 24px;
+}
+
+p {
+    font-family: helvetica;
+    line-height: 24px;
+}
+
+ul {
+    font-family: helvetica;
+    line-height: 24px;
+}
+
+input {
+    font-size: 18px;
+}
+
+select {
+    font-size: 20px;
+}
+
+#copyright {
+    font-family: helvetica;
+    letter-spacing: 3px;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+#errorInfo {
+    color: red;
+    font-weight: bold;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+    -moz-appearance: textfield;
+}

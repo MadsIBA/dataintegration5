@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script defer src="main.js"></script>
+        <title>CVR Info</title>
+    </head>
+    <body>
+        <header>
+            <h1>CVR Info</h1>
+            <p>Please enter a a CVR number and select the country you wish to look up CVR info for</p>
+
+            <h3>Eksempler:</h3>
+            <ul>
+                <li>31642124, Danmark</li>
+                <li>988615625, Norge - Virker heller ikke på <a href="https://cvrapi.dk/">CVRAPI.DK</a></li>
+            </ul>
+        </header>
+
+        <main>
+            <p id="errorInfo">
+                To do: Code error text when input is non-valid <br />
+                Find a solution to theorweigian CVR
+            </p>
+
+            <form
+                name="cvrForm"
+                onsubmit="cvrapi(document.getElementById('cvrNum').value, document.getElementById('cvrCountry').value);return false;"
+            >
+                <input type="number" name="cvrNum" id="cvrNum" required />
+                <select name="cvrCountry" id="cvrCountry">
+                    <option value="dk">Danmark</option>
+                    <option value="no">Norge</option>
+                </select>
+                <input type="submit" />
+            </form>
+
+            <p id="cvrName"></p>
+            <p id="cvrAddress"></p>
+            <p id="cvrZipcode"></p>
+            <p id="cvrCity"></p>
+
+            <hr />
+
+            <h3 id="coordsTitle"></h3>
+            <p id="coordsLat"></p>
+            <p id="coordsLng"></p>
+
+            <br /><br />
+            <hr />
+            <p id="copyright">&copy; 2020 | Mads Møller</p>
+        </main>
+    </body>
+</html>
